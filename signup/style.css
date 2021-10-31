@@ -1,0 +1,146 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 6vh;
+	margin: 0 auto;
+
+	background-color: #225fbf;
+}
+
+.header__content {
+	text-decoration: none;
+
+	color: white;
+
+	font-size: 18px;
+}
+
+.auth-form {
+	display: flex;
+	flex-direction: column;
+
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 0 26px;
+	padding-top: 15vh;
+}
+
+.auth-form__input {
+	height: 40px;
+	padding-left: 12px;
+
+	border: 3px solid #000;
+	border-radius: 5px;
+}
+
+.auth-form__input:focus {
+	border: 3px solid #225fbf;
+}
+
+.auth-form__field {
+	margin-bottom: 24px;
+}
+
+.auth-form__last-field {
+	margin-bottom: 32px;
+}
+
+.auth-form__submit {
+	height: 48px;
+	margin-bottom: 32px;
+
+	transition: transform .2s;
+
+	color: #fff;
+	border-color: #225fbf;
+	border-radius: 8px;
+	background-color: #225fbf;
+
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.auth-form__submit:hover {
+	transform: translateY(-2px);
+}
+
+.auth-form__user-with-acc {
+	display: flex;
+	justify-content: center;
+}
+
+.auth-form__user-with-acc-question {
+	color: rgba(0,0,0,.6);
+}
+
+.auth-form__user-with-acc-login {
+	margin-left: 4px;
+
+	cursor: pointer;
+
+	color: #5551ff;
+}
+
+.employer-card {
+	margin-top: 120px;
+}
+
+.employer-card__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: fit-content;
+	margin: 0 auto;
+	padding: 30px 40px;
+
+	border-radius: 10px;
+	background-color: rgb(243, 243, 243);
+}
+
+.employer-card__image {
+	width: 200px;
+	height: 200px;
+
+	border-radius: 100%;
+
+	object-fit: cover;
+}
+
+.employer-card__name {
+	margin-top: 20px;
+
+	text-align: center;
+
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.employer-card__button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 48px;
+	margin-top: 30px;
+
+	cursor: pointer;
+	transition: transform .2s;
+	text-decoration: none;
+
+	color: #fff;
+	border-color: #225fbf;
+	border-radius: 8px;
+	background-color: #225fbf;
+
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.employer-card__button:hover {
+	transform: translateY(-2px);
+}

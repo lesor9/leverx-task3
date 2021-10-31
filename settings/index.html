@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class='header__content wrapper'>
+            <a href="/" class="logo">
+                <h1 class="logo__company-name">LEVERX GROUP</h1>
+                <h2 class="logo__employee-services">EMPLOYEE SERVICES</h2>
+            </a>
+
+            <nav class="header__links-wrapper">
+                <ul class='header__links'>
+                    <li class="header__link header__link_active">
+                        <a class="header__link-url header__link-url_active" href="/">Adress Book</a>
+                    </li>
+                    <li class="header__link">
+                        <a class="header__link-url" href="#">Leave Requests</a>
+                    </li>
+
+                    <li id='settings' class="header__link" style='display:none;'>
+                        <a class="header__link-url" href="/settings">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <template id='profile-temp'>
+                <div class="profile-control">
+                    <i class="material-icons profile-control__circle-control">circle_notifications</i>
+    
+                    <a href="/signup" class="profile">
+                        <img src="https://ss.metronews.ru/userfiles/materials/126/1268354/858x540.jpg" alt="profile picture" class="profile__img">
+        
+                        <div class="profile__name-wrapper">
+                            <span class="profile__name">Mikhail Zheldak</span>
+                        </div>
+                    </a>
+    
+                    <i id='logout' class="material-icons profile-control__circle-control">logout</i>
+                </div>
+            </template>
+        </div>
+    </header>
+
+    <template id='role-temp'>
+        <section class="roles">
+            <div class="roles_content">
+                <div class="roles__header">ROLES & PERMISSIONS</div>
+                <div class="roles__head">
+                    <div class="roles__input-column">
+                        <div class="roles-form__input">
+                            <i class="material-icons roles__input-icon">search</i>
+                            <input placeholder="Type to search" class="roles__input">
+                        </div>
+                    </div>
+                    <div class="roles__adress-column">Address book role</div>
+                    <div class="roles__vacation-column">Vacation role</div>
+                    <div class="roles__admin-column">Admin</div>
+                </div>
+    
+                <ul class="roles__users">
+                </ul>
+            </div>
+        </section>
+    </template>
+
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

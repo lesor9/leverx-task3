@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Services</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class='header__content wrapper'>
+            <a href="/" class="logo">
+                <h1 class="logo__company-name">LEVERX GROUP</h1>
+                <h2 class="logo__employee-services">EMPLOYEE SERVICES</h2>
+            </a>
+
+            <div class="header__links-wrapper">
+                <ul class='header__links'>
+                    <li class="header__link header__link_active">
+                        <a class="header__link-url header__link-url_active" href="/">Adress Book</a>
+                    </li>
+                    <li class="header__link">
+                        <a class="header__link-url" href="#">Leave Requests</a>
+                    </li>
+                    <li id='settings' class="header__link" style='display:none;'>
+                        <a class="header__link-url" href="/settings">Settings</a>
+                    </li>
+                </ul>
+            </div>
+            
+
+            <template id='profile-temp'>
+                <div class="profile-control">
+                    <i class="material-icons profile-control__circle-control">circle_notifications</i>
+    
+                    <a href="/signup" class="profile">
+                        <img src="https://ss.metronews.ru/userfiles/materials/126/1268354/858x540.jpg" alt="profile picture" class="profile__img">
+        
+                        <div class="profile__name-wrapper">
+                            <span class="profile__name">Mikhail Zheldak</span>
+                        </div>
+                    </a>
+    
+                    <i id='logout' class="material-icons profile-control__circle-control">logout</i>
+                </div>
+            </template>
+        </div>
+    </header>
+
+    <template id="employee-page">
+        <section class="employee-section">
+            <div class="employee-section__content wrapper">
+                <a href="/" style="text-decoration: none;">
+                    <button class="employee-section__back-button">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                    </button>
+                </a>
+    
+    
+                <div class="employee-section__avatar-section">
+                    <div class="employee-section__avatar-block">
+                        <img class="employee-section__avatar" src="https://s1.1zoom.ru/big0/697/Love_Night_Moon_Trees_Silhouette_Two_Dating_576752_1280x853.jpg" alt="img">
+                        <i class="material-icons employee-section__avatar-status">equalizer</i>                    
+                    </div>
+     
+                    <div class="employee-section__sex">Mr</div>
+                    <div class="employee-section__name">Andrei Smirnov</div>
+                    <div class="employee-section__native-name">Андрей Андреевич Смирнов</div>
+                    <ul class="employee-section__tags">
+                        <li class="employee-section__tag">
+                            <i class="material-icons">pool</i>
+                            <span>Работаю</span>
+                        </li>
+                        <li class="employee-section__tag">
+                            <i class="material-icons">laptop_mac</i>
+                            <span>Учусь</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="form-data">
+                    <ul class="employee-section__info">
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">GENERAL INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i id='department-icon' class="info-group__info-icon material-icons">assessment</i>
+                                    <div class="info-group__info-key">Department</div>
+                                    <div id='department' class="info-group__info-value">Web&Mobile</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">sensor_door</i>
+                                    <div class="info-group__info-key">Room</div>
+                                    <div id='room' class="info-group__info-value">1607</div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">CONTACTS</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">phone_enabled</i>
+                                    <div class="info-group__info-key">Internal phone</div>
+                                    <div class="info-group__info-value">123</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">stay_primary_portrait</i>
+                                    <div class="info-group__info-key">Mobile Phone</div>
+                                    <div id='phone' class="info-group__info-value">+375259042229</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">email</i>
+                                    <div class="info-group__info-key">Email</div>
+                                    <div id='email' class="info-group__info-value">defolt@ya.ru</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">drafts</i>
+                                    <div class="info-group__info-key">Skype ID</div>
+                                    <div id='skype' class="info-group__info-value">live:a34sd2asd3ass</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">pool</i>
+                                    <div class="info-group__info-key">C-Number</div>
+                                    <div id='cnumber' class="info-group__info-value"></div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">PROFILE INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">contactless</i>
+                                    <div class="info-group__info-key">Hire date</div>
+                                    <div id='date' class="info-group__info-value">12 Jan 2010</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">flash_on</i>
+                                    <div class="info-group__info-key">Status</div>
+                                    <div class="info-group__info-value">Active</div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">EMPLOYMENT INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">badge</i>
+                                    <div class="info-group__info-key">Start of employment period</div>
+                                    <div class="info-group__info-value">12 Jan 2010</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon" style="visibility:hidden"></i>
+                                    <div class="info-group__info-key">Working day duration</div>
+                                    <div class="info-group__info-value">4 hours</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">badge</i>
+                                    <div class="info-group__info-key">Start of employment period 2</div>
+                                    <div class="info-group__info-value">12 Jan 2019</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon" style="visibility:hidden"></i>
+                                    <div class="info-group__info-key">Working day duration</div>
+                                    <div class="info-group__info-value">8 hours</div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">ADDITIONAL MODULES</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">houseboat</i>
+                                    <div class="info-group__info-key">Непонятно1</div>
+                                    <div class="info-group__info-value">Enabled</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">villa</i>
+                                    <div class="info-group__info-key">Непонятно2</div>
+                                    <div class="info-group__info-value">Enabled</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    <div class="employee-section__edit-buttons">
+                        <a href="#" style="text-decoration: none;">
+                            <button class="employee-section__edit-details">
+                                EDIT DETAILS
+                            </button>
+                        </a>
+        
+                        <a href="#" style="text-decoration: none;">
+                            <button class="employee-section__edit-details">
+                                EDIT DETAILS
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+    </template>
+
+    <template id="employee-editable-page">
+        <section class="employee-section">
+            <div class="employee-section__content wrapper">
+                <a href="/" style="text-decoration: none;">
+                    <button class="employee-section__back-button">
+                        <i class="material-icons">keyboard_arrow_left</i>
+                    </button>
+                </a>
+    
+    
+                <div class="employee-section__avatar-section">
+                    <div class="employee-section__avatar-block">
+                        <img class="employee-section__avatar" src="" alt="img">
+                        <i class="material-icons employee-section__avatar-status">equalizer</i>                    
+                    </div>
+     
+                    <div class="employee-section__sex"></div>
+                    <div class="employee-section__name"></div>
+                    <div class="employee-section__native-name"></div>
+                    <ul class="employee-section__tags">
+                        <li class="employee-section__tag">
+                            <i class="material-icons">pool</i>
+                            <span>Работаю</span>
+                        </li>
+                        <li class="employee-section__tag">
+                            <i class="material-icons">laptop_mac</i>
+                            <span>Учусь</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <form id='form-data' class="form-data" action="#" method="post">
+                    <ul class="employee-section__info">
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">NAME</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">drive_file_rename_outline</i>
+                                    <div class="info-group__info-key">First Name</div>
+                                    <input name='first_name' id='first_name' class="info-group__info-value" />
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">drive_file_rename_outline</i>
+                                    <div class="info-group__info-key">Last Name</div>
+                                    <input name='last_name' id='last_name' class="info-group__info-value" />
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">IMAGE</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">wallpaper</i>
+                                    <div class="info-group__info-key">Link</div>
+                                    <input name='user_avatar' id='image_url' class="info-group__info-value" />
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">GENERAL INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i id='department-icon' class="info-group__info-icon material-icons"></i>
+                                    <div class="info-group__info-key">Department</div>
+                                    <input name='department' id='department' class="info-group__info-value" />
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">sensor_door</i>
+                                    <div class="info-group__info-key">Room</div>
+                                    <input name='room' id='room' class="info-group__info-value" />
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">CONTACTS</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">phone_enabled</i>
+                                    <div class="info-group__info-key">Internal phone</div>
+                                    <div class="info-group__info-value">123</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">stay_primary_portrait</i>
+                                    <div class="info-group__info-key">Mobile Phone</div>
+                                    <input name='phone' value='+375259042229' id='phone' class="info-group__info-value" />
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">email</i>
+                                    <div class="info-group__info-key">Email</div>
+                                    <input name='email' value='defolt@ya.ru' id='email' class="info-group__info-value" />
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">drafts</i>
+                                    <div class="info-group__info-key">Skype ID</div>
+                                    <input name='skype' value='live:a34sd2asd3ass' id='skype' class="info-group__info-value" />
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">pool</i>
+                                    <div class="info-group__info-key">C-Number</div>
+                                    <input name='cnumber' id='cnumber' class="info-group__info-value" />
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">PROFILE INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">contactless</i>
+                                    <div class="info-group__info-key">Hire date</div>
+                                    <div id='date' class="info-group__info-value">12 Jan 2010</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">flash_on</i>
+                                    <div class="info-group__info-key">Status</div>
+                                    <div class="info-group__info-value">Active</div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">EMPLOYMENT INFO</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">badge</i>
+                                    <div class="info-group__info-key">Start of employment period</div>
+                                    <div class="info-group__info-value">12 Jan 2010</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon" style="visibility:hidden"></i>
+                                    <div class="info-group__info-key">Working day duration</div>
+                                    <div class="info-group__info-value">4 hours</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">badge</i>
+                                    <div class="info-group__info-key">Start of employment period 2</div>
+                                    <div class="info-group__info-value">12 Jan 2019</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon" style="visibility:hidden"></i>
+                                    <div class="info-group__info-key">Working day duration</div>
+                                    <div class="info-group__info-value">8 hours</div>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <li class="employee-section__info-group info-group">
+                            <div class="info-group__title">ADDITIONAL MODULES</div>
+                            <hr class="info-group__line">
+                            <ul>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">houseboat</i>
+                                    <div class="info-group__info-key">Непонятно1</div>
+                                    <div class="info-group__info-value">Enabled</div>
+                                </li>
+                                <li class="info-group__info-line">
+                                    <i class="info-group__info-icon material-icons">villa</i>
+                                    <div class="info-group__info-key">Непонятно2</div>
+                                    <div class="info-group__info-value">Enabled</div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="employee-section__edit-buttons">
+                        <a href="#" style="text-decoration: none;">
+                            <button type='submit' class="employee-section__edit-details">
+                                SAVE DETAILS
+                            </button>
+                        </a>
+        
+                        <a href="#" style="text-decoration: none;">
+                            <button type='submit' class="employee-section__edit-details">
+                                SAVE DETAILS
+                            </button>
+                        </a>
+                    </div>
+                </form>
+
+    
+
+            </div>
+        </section>
+    </template>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

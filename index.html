@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Services</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class='header__content wrapper'>
+            <a href="/" class="logo">
+                <h1 class="logo__company-name">LEVERX GROUP</h1>
+                <h2 class="logo__employee-services">EMPLOYEE SERVICES</h2>
+            </a>
+
+            <nav class="header__links-wrapper">
+                <ul class='header__links'>
+                    <li class="header__link header__link_active">
+                        <a class="header__link-url header__link-url_active" href="/">Adress Book</a>
+                    </li>
+                    <li class="header__link">
+                        <a class="header__link-url" href="#">Leave Requests</a>
+                    </li>
+
+                    <li id='settings' class="header__link" style='display:none;'>
+                        <a class="header__link-url" href="/settings">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <template id='profile-temp'>
+                <div class="profile-control">
+                    <i class="material-icons profile-control__circle-control">circle_notifications</i>
+    
+                    <a href="/signup" class="profile">
+                        <img src="https://ss.metronews.ru/userfiles/materials/126/1268354/858x540.jpg" alt="profile picture" class="profile__img">
+        
+                        <div class="profile__name-wrapper">
+                            <span class="profile__name">Mikhail Zheldak</span>
+                        </div>
+                    </a>
+    
+                    <i id='logout' class="material-icons profile-control__circle-control">logout</i>
+                </div>
+            </template>
+
+        </div>
+    </header>
+
+    <section class="employers-section">
+        <div class="employers-section__content wrapper">
+            <form class="search-form">
+                <div class="employers-section__type-of-search">
+                    <div class="employers-section__search employers-section__search_active">BASIC SEARCH</div>
+                    <div class="employers-section__search">ADVANCED SEARCH</div>
+                </div>
+    
+                <div class="search-form__wrapper">
+                    <div class="search-form__input">
+                        <i class="material-icons search-form__input-icon">search</i>
+                        <input placeholder="John Smith / Джон Смит" class="search-form__input-field">
+                    </div>
+                    
+                    <button class="search-form__button">SEARCH</button>
+                </div>
+            </form>
+    
+            <div class="employers-section__employers">
+                <div class="employers-section__employers-info">
+                    <span class="employers-section__employers-number">0 employees displayed</span>
+                    <div class="employers-section__employers-view">
+                        <i class="material-icons employers-section__icon-view">grid_view</i>
+                        <i class="material-icons employers-section__icon-view">table_rows</i>
+                    </div>
+                </div>
+
+                <div class="employers-section__list"></div>
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

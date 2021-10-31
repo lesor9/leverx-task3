@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>LeverX</title>
+</head>
+<body class="body">
+    <header class="header">
+        <a href="/" class="header__content">
+            LeverX
+        </a>
+    </header>
+
+    <template id='form_temp'>
+        <form class="auth-form" action='http://localhost:3000/employees/' method="POST">
+            <input id='fname' name='fname' class="auth-form__input auth-form__field" placeholder="First Name">
+            <input id='lname' name='lname' class="auth-form__input auth-form__field" placeholder="Last Name">
+
+            <input name='email' class="auth-form__input auth-form__field" placeholder="Email">
+            <input name='pass' class="auth-form__input auth-form__last-field" type='password' placeholder="Password">
+            <button id='submit-btn' class="auth-form__submit" type="submit">Create account</button>
+            
+            <div class="auth-form__user-with-acc">
+                <span class="auth-form__user-with-acc-question">Already have an account?</span>
+                <div id='change-mode' class="auth-form__user-with-acc-login">Log in</div>
+            </div>
+        </form>
+    </template>
+
+    <template id="card-temp">
+        <div class="employer-card">
+            <div class="employer-card__content">
+                <img class="employer-card__image" alt='img'/>
+                <div class="employer-card__name"></div>
+                <a href="/" class="employer-card__button">
+                    <span>Main Page</span>
+                </a>
+                <button id='logout' class="employer-card__button">Log Out</button>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

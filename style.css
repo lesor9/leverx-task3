@@ -1,0 +1,551 @@
+body {
+	background-color: #f6f8fe;
+}
+
+.wrapper {
+	width: 80%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.header {
+	height: 80px;
+
+	background-color: #2967b9;
+}
+
+.header__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 100%;
+
+	text-align: center;
+
+	color: white;
+}
+
+.logo {
+	display: flex;
+	flex-direction: column;
+
+	width: fit-content;
+
+	text-align: left;
+	text-decoration: none;
+
+	color: white;
+}
+
+.logo__company-name {
+	width: fit-content;
+
+	cursor: pointer;
+
+	color: #86a9e3;
+
+	font-size: 15px;
+}
+
+.logo__employee-services {
+	cursor: pointer;
+
+	font-size: 25px;
+}
+
+.header__links-wrapper {
+	height: 100%;
+}
+
+.header__links {
+	display: flex;
+
+	height: 100%;
+
+	cursor: pointer;
+}
+
+.header__link {
+	margin-right: 30px;
+	padding: 0 10px;
+
+	color: #dae7fa;
+
+	font-size: 17px;
+	line-height: 100px;
+}
+
+.header__link:last-child {
+	margin-right: 0;
+}
+
+.header__link:hover {
+	color: white;
+	border-bottom: 5px solid #5092fa;
+}
+
+.header__link_active {
+	color: white;
+	border-bottom: 5px solid #5092fa;
+}
+
+.header__link-url {
+	display: flex;
+	align-items: center;
+
+	height: 80px;
+
+	text-decoration: none;
+
+	color: white;
+}
+
+.profile-control {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 300px;
+}
+
+.profile-control__circle-control {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 40px;
+	height: 40px;
+
+	cursor: pointer;
+
+	border-radius: 100%;
+	background-color: #1653b3;
+}
+
+.profile-control__circle-control:hover {
+	background-color: #2366d1;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: 200px;
+
+	cursor: pointer;
+	text-decoration: none;
+
+	color: white;
+	border-radius: 40px;
+	background-color: #1653b3;
+}
+
+.profile:hover {
+	background-color: #2366d1;
+}
+
+.profile__img {
+	width: 40px;
+	height: 40px;
+
+	border-radius: 100%;
+
+	object-fit: cover;
+}
+
+.profile__name-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 100%;
+}
+
+.profile__name {
+	font-size: 17px;
+}
+
+.employers-section {
+	padding: 50px 0;
+}
+
+.employers-section__content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.employers-section__type-of-search {
+	display: flex;
+}
+
+.employers-section__search {
+	height: 40px;
+	margin-right: 5px;
+
+	cursor: pointer;
+
+	font-size: 15px;
+	line-height: 40px;
+}
+
+.employers-section__search:hover {
+	border-bottom: 5px solid #5092fa;
+}
+
+.employers-section__search:last-child {
+	margin-right: 0;
+}
+
+.employers-section__search_active {
+	border-bottom: 5px solid #5092fa;
+
+	font-weight: bold;
+}
+
+.search-form__wrapper {
+	display: flex;
+	flex-direction: column;
+
+	padding: 20px;
+
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.search-form__input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 10px;
+	padding: 0 7px;
+
+	cursor: pointer;
+
+	border: 2px solid #dadee2;
+	border-radius: 3px;
+}
+
+.search-form__input-icon {
+	color: #dadee2;
+}
+
+.search-form__input-field {
+	width: 85%;
+	height: 35px;
+	margin: 0;
+	padding: 0;
+
+	border: none;
+}
+
+.search-form__input-field:focus {
+	outline: none;
+}
+
+.search-form__button {
+	height: 35px;
+
+	cursor: pointer;
+
+	color: white;
+	border: none;
+	border-radius: 3px;
+	outline: none;
+	background: #5395ff;
+
+	font-size: 15px;
+}
+
+.search-form__button:hover {
+	background: #6fa6ff;
+}
+
+
+
+
+.employers-section__employers {
+	width: 65%;
+}
+.employers-section__employers-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 45px;
+}
+.employers-section__employers-number {
+	color: #404549;
+
+	font-weight: bold;
+}
+.employers-section__employers-view {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	cursor: pointer;
+
+	color: #e0e4e9;
+}
+
+.employers-section__icon-view:hover {
+	color: #99b6e3;
+}
+
+.employers-section__icon-view_active {
+	color: #99b6e3;
+}
+
+
+
+
+
+.employers-section__list_grid-view {
+	display: grid;
+
+	gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.employers-section__list_grid-view .employer-card {
+	padding: 30px 0;
+
+	cursor: pointer;
+
+	border-radius: 7px;
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.employers-section__list_grid-view .employer-card__content {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.employers-section__list_grid-view .employer-card__main-part {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.employers-section__list_grid-view .employer-card__name {
+	text-align: center;
+
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.employers-section__list_grid-view .employer-card__native-name {
+	text-align: center;
+
+	color: rgb(58, 58, 58);
+}
+
+.employers-section__list_grid-view .employer-card__image {
+	width: 100px;
+	height: 100px;
+
+	border-radius: 100%;
+
+	object-fit: cover;
+}
+
+.employers-section__list_grid-view .employer-card__line {
+	width: 100%;
+
+	background-color: rgb(58, 58, 58);
+}
+
+.employers-section__list_grid-view .employer-card__info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	width: 100%;
+}
+
+.employers-section__list_grid-view .employer-card__detailed-info {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.employers-section__list_grid-view .employer-card__info-part {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.employers-section__list_grid-view .employer-card__info-part-icon {
+	padding: 0 3px;
+
+	color: #8fb9fe;
+}
+
+
+
+
+
+.employers-section__list_table-view {
+	width: 100%;
+
+	text-align: center;
+}
+
+.employers-section__list_table-view .employer-card__image {
+	width: 100px;
+	height: 100px;
+
+	border-radius: 100%;
+
+	object-fit: cover;
+}
+
+.employers-section__list_table-view .employers-section__list_table-head {
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.employers-section__list_table-view .employers-section__list_table-head-data {
+	padding: 15px 0;
+}
+
+.employers-section__list_table-view .employers-section__list_table-body:before {
+	display: block;
+
+	content: '@';
+	text-indent: -99999px;
+
+	line-height: 10px;
+}
+
+.employers-section__list_table-view .employers-section__list_table-row {
+	cursor: pointer;
+
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.employers-section__list_table-view .employers-section__list_table-data {
+	padding: 4px 4px;
+
+	vertical-align: middle;
+
+	font-size: 17px;
+}
+
+.employers-section__list_table-view .employer-card__info-part-icon {
+	display: block;
+
+	color: #8fb9fe;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+	.wrapper {
+		width: 90%;
+	}
+
+	.logo__company-name {
+		font-size: 10px;
+	}
+
+	.logo__employee-services {
+		font-size: 15px;
+	}
+
+	.header__link {
+		margin-right: 10px;
+	}
+
+	.header__link-url {
+		font-size: 12px;
+	}
+
+	.profile-control {
+		width: 230px;
+	}
+
+	.profile {
+		width: 130px;
+	}
+
+	.profile__name {
+		font-size: 10px;
+	}
+
+	.employers-section__search {
+		font-size: 11px;
+	}
+
+	.employers-section__list_grid-view .employer-card {
+		padding: 10px 0;
+	}
+
+	.employers-section__list_grid-view .employer-card__name {
+		font-size: 15px;
+	}
+
+	.employers-section__list_grid-view .employer-card__native-name {
+		font-size: 10px;
+	}
+
+	.employers-section__list_grid-view .employer-card__detailed-info {
+		justify-content: center;
+	}
+
+	.employers-section__list_grid-view .employer-card__info-part {
+		font-size: 10px;
+	}
+
+	.material-icons {
+		font-size: 15px;
+	}
+
+	.employers-section__list_grid-view .employer-card__image {
+		width: 50px;
+		height: 50px;
+	}
+
+	.employers-section__list_table-view {
+		font-size: 15px;
+	}
+
+	.employers-section__list_table-view .employers-section__list_table-data {
+		font-size: 12px;
+	}
+
+	.employers-section__list_table-view .employer-card__image {
+		width: 50px;
+		height: 50px;
+	}
+
+	.search-form__button {
+		font-size: 10px;
+	}
+}
